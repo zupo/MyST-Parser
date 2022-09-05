@@ -166,10 +166,6 @@ jobs:
       env:
         XINDYOPTS: -L english -C utf8  -M sphinx.xdy
 
-    - name: grep log for warnings
-      run: |
-         cat docs/_build/latex/mystparser.log | grep "LaTeX Warning"
-
   publish:
 
     name: Publish myst-parser to PyPi
