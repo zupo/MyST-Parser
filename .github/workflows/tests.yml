@@ -145,6 +145,8 @@ jobs:
           make
           cp -f xindy.mem /opt/texlive/texdir/bin/x86_64-linuxmusl/
           cd ../../
+      env:
+        XINDYOPTS: -L english -C utf8  -M sphinx.xdy
 
   publish:
 
