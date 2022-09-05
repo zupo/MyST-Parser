@@ -129,7 +129,7 @@ jobs:
 
   doc-build-pdf:
 
-    name: Documentation builds
+    name: Documentation PDF build
     runs-on: ubuntu-latest
 
     steps:
