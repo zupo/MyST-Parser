@@ -127,6 +127,13 @@ jobs:
       run: |
         sphinx-build -nW --keep-going -b ${{ matrix.format }} docs/ docs/_build/${{ matrix.format }}
 
+    - if: matrix.format == 'latex'
+      name: Test PDF build
+      uses: xu-cheng/latex-action@v2
+      with:
+        working_directory: docs/_build/latex
+        root_file: "mystparser.tex"
+
   publish:
 
     name: Publish myst-parser to PyPi
