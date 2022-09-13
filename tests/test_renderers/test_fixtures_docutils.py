@@ -88,8 +88,8 @@ def test_docutils_directives(file_params, monkeypatch):
 @pytest.mark.param_file(FIXTURE_PATH / "docutil_syntax_extensions.txt")
 def test_syntax_extensions(file_params):
     """The description is parsed as a docutils commandline"""
-    if "DOCUTILS>0.17" in file_params.title and __version_info__ < (0, 18):
-        pytest.skip(file_params.description)
+    if "anchors-precedence" in file_params.title and __version_info__ < (0, 18):
+        pytest.skip("output AST has different section ids in docutils < 0.18")
     pub = Publisher(parser=Parser())
     option_parser = pub.setup_option_parser()
     try:
