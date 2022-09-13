@@ -159,7 +159,7 @@ content
             A Title
 .
 
-[anchors-precedence] --myst-heading-anchors=2
+[anchors-precedence DOCUTILS>0.17] --myst-heading-anchors=2
 .
 # A Title
 
